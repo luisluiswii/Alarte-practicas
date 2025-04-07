@@ -45,7 +45,6 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: var(--color-marron);
-    
 }
 
 .logo span {
@@ -70,6 +69,22 @@ body {
 
 .nav-links a:hover {
     color: var(--color-rosa);
+}
+
+/* Menú móvil */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--color-marron);
+}
+
+.menu-toggle.active i {
+    transform: rotate(90deg);
+}
+
+.menu-toggle i {
+    transition: transform 0.3s ease;
 }
 
 /* Hero Section */
@@ -382,6 +397,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
@@ -414,18 +431,39 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
+    .menu-toggle {
+        display: block;
     }
     
     .nav-links {
-        margin-top: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active {
+        max-height: 300px;
+        padding: 20px 0;
     }
     
     .nav-links li {
-        margin: 10px 15px;
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-container {
+        padding: 15px 20px;
+        position: relative;
     }
     
     .hero {
