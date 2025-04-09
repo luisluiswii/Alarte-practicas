@@ -1,36 +1,71 @@
-/* Configuración básica */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;}
+
+.hero {
+    background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
     color: white;
-    cursor: pointer;
-}
-
-.menu {
+    padding: 80px 20px;
     display: flex;
-    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh; /* Altura mínima */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* Degradado negro al 60% de opacidad */
+        url('/imagenes/Recurso_6.jpeg'); /* Ruta de tu imagen */
+        background-size: cover; /* Cubre todo el espacio sin deformarse */
+        background-position: center; /* Centra la imagen */
+        color: white; /* Texto en blanco (asegúrate de que contraste bien) */
 }
 
-.menu.active {
-    display: block;
-    flex-direction: column;
-    background-color: #cc9c94;
-    padding: 1rem 0;
-    text-align: center;
+.hero-content {
+    padding-left: 15%;
+    padding-right: 15%;
+    
 }
 
-.menu li {
-    margin: 0.5rem 0;
+.hero h1 {
+    font-size: 6rem;
+    margin-bottom: 20px;
 }
 
+.hero p {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #d4a9a3;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.cta-button:hover {
+    background: #d1978f;
+    transform: translateY(-3px);
+}
+
+.hero-image img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive para móviles */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
+    .hero {
+        flex-direction: column;
+        text-align: center;
     }
-
-    .menu {
-        display: none; /* Oculta el menú por defecto */
+    .hero-image {
+        margin-top: 40px;
     }
 }

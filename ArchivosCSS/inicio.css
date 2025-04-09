@@ -1,5 +1,5 @@
  /*seccion .navbar*/
- .navbar.navbar-default{
+.navbar.navbar-default{
     background-color: #9cba9c;
     
 }
@@ -156,4 +156,70 @@ body{
     -o-transition: all 0.4s;
     -ms-transition: all 0.4s;
     transition: all 0.4s;
+}
+
+.hero {
+    background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+    color: white;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh; /* Altura mínima */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* Degradado negro al 60% de opacidad */
+        url('/imagenes/Recurso_6.jpeg'); /* Ruta de tu imagen */
+        background-size: cover; /* Cubre todo el espacio sin deformarse */
+        background-position: center; /* Centra la imagen */
+        color: white; /* Texto en blanco (asegúrate de que contraste bien) */
+}
+
+.hero-content {
+    padding-left: 15%;
+    padding-right: 15%;
+    
+}
+
+.hero h1 {
+    font-size: 6rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #d4a9a3;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.cta-button:hover {
+    background: #d1978f;
+    transform: translateY(-3px);
+}
+
+.hero-image img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image {
+        margin-top: 40px;
+    }
 }

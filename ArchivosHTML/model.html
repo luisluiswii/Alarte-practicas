@@ -36,11 +36,6 @@
                 <p>En Elysian nos especializamos en realzar tu belleza natural con los mejores tratamientos personalizados. Nuestro equipo de estilistas profesionales está aquí para transformar tu imagen.</p>
                 <a href="#" class="cta-button">Reserva tu cita</a>
             </div>
-            <div class="hero-image">
-                <div class="placeholder-image">
-                    <img src="/api/placeholder/400/320" alt="Estilista trabajando en un peinado" />
-                </div>
-            </div>
         </div>
     </section>
     
@@ -222,27 +217,6 @@
     </footer>
 
     <!-- Script para el menú móvil -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navLinks = document.querySelector('.nav-links');
-            
-            mobileMenu.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-                mobileMenu.classList.toggle('active');
-            });
-            
-            // Cerrar el menú al hacer clic en un enlace
-            const navItems = document.querySelectorAll('.nav-links a');
-            navItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    if (navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
-                        mobileMenu.classList.remove('active');
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="/ArchivosJS/model.js"></script>
 </body>
 </html>

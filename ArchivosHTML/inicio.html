@@ -6,36 +6,96 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../ArchivosCSS/styles.css">
-
+    <title>Pagina Alarte</title>
+    <link rel="stylesheet" href="../ArchivosCSS/inicio.css">
 </head>
 <body>
-    <header>
+    <!--navbar -->
+    <nav class="navbar navbar-default">
         <div class="container">
-            <div class="logo">
-                <img src="../imagenes/logo3.png" alt="Logo" width="100  " height="100">
-                <img src="../imagenes/logo4.png" alt="Logo" width="180" height="100">
-            </div>
-            <nav>
-                <ul>
-                    <li class="active"><a href="#">Inicio</a></li>
-                    <li><a href="#">Tienda</a></li>
-                    <li><a href="#">Cuenta</a></li>
-                    <li><a href="#">Cuenta</a></li>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        <a class="navbar-brand" href="#">
+            <div style="display: flex; align-items: center; height: 100%;">
+                <img src="../imagenes/logo3BgRemoved.png" width="70" height="70" alt="Logo 1">
+                <img src="../imagenes/logo4BgRemoved.png" width="100" height="50" alt="Logo 2" style="margin-left: 10px;">
+            </div> 
+        </a>
+        </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Nuestros trabajos</a></li>
+                    <li><a href="#">Noticias</a></li>
+                    <li><a href="#">Contactanos</a></li>
+
                     <li>
-                        <a href="#">
-                            Carrito
-                            <span class="cart-count">3</span>
-                        </a>
+                        <a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Iniciar sesión</a>
                     </li>
                 </ul>
-            </nav>
+                <div class="collapse nav navbar-nav nav-collapse slide-down" id="nav-collapse2">
+                    <form class="navbar-form navbar-right form-inline" role="form">
+                        <div class="form-group">
+                            <label class="sr-only" for="Email">Email</label>
+                            <input type="email" class="form-control" id="Email" placeholder="Email" autofocus required />
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="Password">Contraseña</label>
+                            <input type="password" class="form-control" id="Password" placeholder="Password" required />
+                        </div>
+                        <button type="submit" class="btn btn-success">inicia sesion</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </header>
-
+        <!-- Fin de navbar -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Alarte</h1>
+                <p>Peluquería y estética.</p>
+                <a href="#contacto" class="cta-button">PEDIR CITA</a>
+            </div>
+        </header>
+         <!--inicio btn flotantes-->
+         <div class="text-center">
+    </div>
+        <div class="social_media_div">
+            <ul class="icons_list">
+                <li>
+                    <a href="javascript:void(0)"><i class="facebook-icon fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"><i class="googleplus-icon fab fa-google-plus-g"></i></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"><i class="linkedin-icon fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"><i class="twitter-icon fab fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"><i class="instagram-icon fab fa-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!--Fin btn flotantes-->
+        <!--importar scripts -->
+    <script src="/ArchivosJS/inicio.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
