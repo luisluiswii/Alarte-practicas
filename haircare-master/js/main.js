@@ -163,28 +163,35 @@
 					st = $w.scrollTop(),
 					navbar = $('.ftco_navbar'),
 					sd = $('.js-scroll-wrap');
-
+	
 			if (st > 150) {
-				if ( !navbar.hasClass('scrolled') ) {
-					navbar.addClass('scrolled');	
+				if (!navbar.hasClass('scrolled')) {
+					navbar.addClass('scrolled');
+					// Cambiar la primera imagen (con clase imagen-navbar-light)
+					$('.imagen-navbar-light').attr('src', '/imagenes/logo3BgRemoved_black.png');
+					// Cambiar la segunda imagen (seleccionando por posición)
+					$('.navbar-brand img:eq(1)').attr('src', '/imagenes/logo4BgRemoved_black.png');
 				}
 			} 
 			if (st < 150) {
-				if ( navbar.hasClass('scrolled') ) {
+				if (navbar.hasClass('scrolled')) {
 					navbar.removeClass('scrolled sleep');
+					// Volver a las imágenes originales
+					$('.imagen-navbar-light').attr('src', '/imagenes/logo3BgRemoved.png');
+					$('.navbar-brand img:eq(1)').attr('src', '/imagenes/logo4BgRemoved.png');
 				}
 			} 
-			if ( st > 350 ) {
-				if ( !navbar.hasClass('awake') ) {
-					navbar.addClass('awake');	
+			if (st > 350) {
+				if (!navbar.hasClass('awake')) {
+					navbar.addClass('awake');    
 				}
 				
 				if(sd.length > 0) {
 					sd.addClass('sleep');
 				}
 			}
-			if ( st < 350 ) {
-				if ( navbar.hasClass('awake') ) {
+			if (st < 350) {
+				if (navbar.hasClass('awake')) {
 					navbar.removeClass('awake');
 					navbar.addClass('sleep');
 				}
