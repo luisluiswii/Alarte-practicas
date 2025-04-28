@@ -78,7 +78,7 @@ color: rgb(255, 255, 255);}
     
     .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
     .navbar .nav-collapse .navbar-form { margin: 0; }
-    .nav-collapse>li { float: none; }
+    .nav-collapse>li { float:inline-start }
     
     .navbar.navbar-default .nav-collapse,
     .navbar.navbar-inverse .nav-collapse {
