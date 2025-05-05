@@ -1,13 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="/ArchivosCSS/pruebas.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Expandida con Botones</title>
+    <style>
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.table thead th {
+  background: #F96D00;
+  color: #fff;
+  font-weight: 600;
+  padding: 15px;
+  text-align: left;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tbody td {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.category-cell {
+  background: #f5f5f5;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+  
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+  
+  .table tr {
+    margin-bottom: 15px;
+  }
+  
+  .table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .category-cell {
+    text-align: right;
+  }
+}
+    </style>
 </head>
 <body>
-    <a href="https://www.instagram.com/elysian.salon/" class="botonquegira"><i class="facebook-icon fab fa-facebook-f"></i></a>
+    <section class="ftco-section">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-10 text-center heading-section ftco-animate">
+              <h2 class="mb-4">Nuestros Servicios</h2>
+              <p>Descubre todos los tratamientos profesionales que ofrecemos</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="table-wrap">
+                <table class="table table-striped">
+                  <thead class="thead-primary">
+                    <tr>
+                      <th>Categoría</th>
+                      <th>Servicio</th>
+                      <th>Descripción</th>
+                      <th>Duración</th>
+                      <th>Precio</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="4" class="category-cell">Cortes</td>
+                      <td>Corte Mujer</td>
+                      <td>Corte personalizado con lavado y secado</td>
+                      <td>45 min</td>
+                      <td>€25</td>
+                    </tr>
+                    <tr>
+                      <td>Corte Hombre</td>
+                      <td>Corte clásico o moderno con acabado perfecto</td>
+                      <td>30 min</td>
+                      <td>€18</td>
+                    </tr>
+                    <tr>
+                      <td>Corte Niño</td>
+                      <td>Corte infantil con diseño divertido</td>
+                      <td>25 min</td>
+                      <td>€15</td>
+                    </tr>
+                    <tr>
+                      <td>Corte + Barba</td>
+                      <td>Corte completo con arreglo de barba</td>
+                      <td>50 min</td>
+                      <td>€30</td>
+                    </tr>
+                    
+                    <tr>
+                      <td rowspan="3" class="category-cell">Coloración</td>
+                      <td>Tinte completo</td>
+                      <td>Coloración profesional con productos de calidad</td>
+                      <td>1.5 h</td>
+                      <td>€45</td>
+                    </tr>
+                    <tr>
+                      <td>Reflejos</td>
+                      <td>Meches o balayage para un look natural</td>
+                      <td>2 h</td>
+                      <td>€60</td>
+                    </tr>
+                    <tr>
+                      <td>Tratamiento de keratina</td>
+                      <td>Reparación intensiva para cabello dañado</td>
+                      <td>2.5 h</td>
+                      <td>€85</td>
+                    </tr>
+                    
+                    <tr>
+                      <td rowspan="3" class="category-cell">Depilación</td>
+                      <td>Cera piernas completas</td>
+                      <td>Depilación con cera caliente o fría</td>
+                      <td>45 min</td>
+                      <td>€25</td>
+                    </tr>
+                    <tr>
+                      <td>Cera axilas</td>
+                      <td>Depilación precisa con cera</td>
+                      <td>15 min</td>
+                      <td>€10</td>
+                    </tr>
+                    <tr>
+                      <td>Cera facial</td>
+                      <td>Depilación de cejas, labio o patillas</td>
+                      <td>20 min</td>
+                      <td>€12</td>
+                    </tr>
+                    
+                    <tr>
+                      <td rowspan="3" class="category-cell">Tratamientos Faciales</td>
+                      <td>Limpieza facial</td>
+                      <td>Profunda limpieza con extracción de impurezas</td>
+                      <td>1 h</td>
+                      <td>€40</td>
+                    </tr>
+                    <tr>
+                      <td>Hidratación facial</td>
+                      <td>Nutrición intensiva para tu piel</td>
+                      <td>45 min</td>
+                      <td>€35</td>
+                    </tr>
+                    <tr>
+                      <td>Mascarilla revitalizante</td>
+                      <td>Tratamiento anti-edad con efecto lifting</td>
+                      <td>1 h</td>
+                      <td>€50</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 </body>
 </html>
