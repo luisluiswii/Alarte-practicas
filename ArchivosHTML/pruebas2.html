@@ -1,94 +1,455 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <!--importar librerias -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Alarte</title>
-    <link rel="stylesheet" href="../ArchivosCSS/inicio.css">
+    <title>Servicios de Peluquería - Belleza & Estilo</title>
+    <!-- Bootstrap 4 CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #54946c;
+            --secondary: #faedcd;
+            --dark: #3a3a3a;
+            --light: #fefae0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/400') center/cover no-repeat;
+            color: white;
+            padding: 7rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .service-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Services Tabs Styling */
+        #servicesTabs .nav-link {
+            color: var(--dark);
+            background-color: var(--light);
+            border: 2px solid var(--primary);
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        #servicesTabs .nav-link:hover {
+            background-color: var(--secondary);
+        }
+        
+        #servicesTabs .nav-link.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .tab-content {
+            padding: 20px 0;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: #c29365;
+            border-color: #c29365;
+        }
+        
+        .card-header {
+            background-color: var(--secondary);
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .nav-tabs .nav-link {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <!--navbar -->
-    <nav class="navbar navbar-default">
+    <!-- Services Section -->
+    <section id="servicios" class="py-5">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-        <a class="navbar-brand" href="#">
-            <div style="display: flex; align-items: center; height: 100%;">
-                <img src="../imagenes/logoFondoBlanco1.PNG" width="90" height="50" alt="Logo 1">
-                <img src="../imagenes/logoFondoBlanco2.PNG" width="100" height="50" alt="Logo 2" style="margin-left: 10px;">
-            </div> 
-        </a>
-        </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse-2">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Sobre nosotros</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Nuestros trabajos</a></li>
-                    <li><a href="#">Noticias</a></li>
-                    <li><a href="#">Contactanos</a></li>
-
-                    <li>
-                        <a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Iniciar sesión</a>
-                    </li>
-                </ul>
-                <div class="collapse nav navbar-nav nav-collapse slide-down" id="nav-collapse2">
-                    <form class="navbar-form navbar-right form-inline" role="form">
-                        <div class="form-group">
-                            <label class="sr-only" for="Email">Email</label>
-                            <input type="email" class="form-control" id="Email" placeholder="Email" autofocus required />
+            <h2 class="text-center mb-5">Nuestros Servicios de Peluquería</h2>
+            
+            <!-- Services Categories Tabs -->
+            <ul class="nav nav-pills mb-4 justify-content-center" id="servicesTabs" role="tablist">
+                <li class="nav-item mx-2">
+                    <a class="nav-link active px-4 py-2" id="cortes-tab" onclick="mostrarCategoria('cortes')" role="tab">
+                        <i class="fas fa-cut mr-2"></i>Cortes & Peinados
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link px-4 py-2" id="color-tab" onclick="mostrarCategoria('color')" role="tab">
+                        <i class="fas fa-palette mr-2"></i>Color & Mechas
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link px-4 py-2" id="tratamientos-tab" onclick="mostrarCategoria('tratamientos')" role="tab">
+                        <i class="fas fa-spa mr-2"></i>Tratamientos
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Tab Content -->
+            <div class="tab-content" id="servicesTabContent">
+                <!-- Cortes & Peinados -->
+                <div class="tab-pane fade show active" id="cortes" role="tabpanel">
+                    <!-- Subdivisiones para Cortes & Peinados -->
+                    <ul class="nav nav-tabs mb-4 justify-content-center" id="corteSubTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="corte-damas-tab" onclick="mostrarSubCategoria('corte-damas', 'corteSubTabContent')" role="tab">Corte Damas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="corte-caballeros-tab" onclick="mostrarSubCategoria('corte-caballeros', 'corteSubTabContent')" role="tab">Corte Caballeros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="peinados-eventos-tab" onclick="mostrarSubCategoria('peinados-eventos', 'corteSubTabContent')" role="tab">Peinados Eventos</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Contenido de las subdivisiones -->
+                    <div class="tab-content" id="corteSubTabContent">
+                        <!-- Corte Damas -->
+                        <div class="tab-pane fade show active" id="corte-damas" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card service-card shadow-sm">
+                                        <div class="card-header text-center py-3">
+                                            <i class="fas fa-cut service-icon"></i>
+                                            <h3 class="card-title">Corte Básico</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Corte personalizado según tu rostro y estilo. Incluye lavado y peinado básico.</p>
+                                            <p class="price mb-3">Desde $25.00</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">Duración: 45-60 min</small>
+                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card service-card shadow-sm">
+                                        <div class="card-header text-center py-3">
+                                            <i class="fas fa-cut service-icon"></i>
+                                            <h3 class="card-title">Corte + Peinado</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Corte completo con peinado profesional para lucir perfecta.</p>
+                                            <p class="price mb-3">Desde $35.00</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">Duración: 60-75 min</small>
+                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte + Peinado')">Reservar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="sr-only" for="Password">Contraseña</label>
-                            <input type="password" class="form-control" id="Password" placeholder="Password" required />
+                        
+                        <!-- Corte Caballeros -->
+                        <div class="tab-pane fade" id="corte-caballeros" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card service-card shadow-sm">
+                                        <div class="card-header text-center py-3">
+                                            <i class="fas fa-cut service-icon"></i>
+                                            <h3 class="card-title">Corte Clásico</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Corte tradicional para caballeros, incluye lavado y acabado.</p>
+                                            <p class="price mb-3">Desde $20.00</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">Duración: 30-45 min</small>
+                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Clásico')">Reservar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card service-card shadow-sm">
+                                        <div class="card-header text-center py-3">
+                                            <i class="fas fa-cut service-icon"></i>
+                                            <h3 class="card-title">Degradado</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Corte con degradado profesional y acabado con productos de peinado.</p>
+                                            <p class="price mb-3">Desde $25.00</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">Duración: 45 min</small>
+                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Degradado')">Reservar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-success">inicia sesion</button>
-                    </form>
+                        
+                        <!-- Peinados Eventos -->
+                        <div class="tab-pane fade" id="peinados-eventos" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card service-card shadow-sm">
+                                        <div class="card-header text-center py-3">
+                                            <i class="fas fa-wind service-icon"></i>
+                                            <h3 class="card-title">Peinado Boda</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Peinado especial para bodas, incluye prueba previa.</p>
+                                            <p class="price mb-3">Desde $70.00</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">Duración: 90 min</small>
+                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Peinado Boda')">Reservar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card service-card shadow-sm">
+                                        <div class="card-header text-center py-3">
+                                            <i class="fas fa-wind service-icon"></i>
+                                            <h3 class="card-title">Peinado Fiesta</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Peinado elegante para eventos especiales y fiestas.</p>
+                                            <p class="price mb-3">Desde $45.00</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">Duración: 60 min</small>
+                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Peinado Fiesta')">Reservar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Color & Mechas -->
+                <div class="tab-pane fade" id="color" role="tabpanel">
+                    <div class="row">
+                        <!-- Coloración -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header text-center py-3">
+                                    <i class="fas fa-palette service-icon"></i>
+                                    <h3 class="card-title">Coloración</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Tintes profesionales para un color duradero y vibrante.</p>
+                                    <p class="price mb-3">Desde $45.00</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 90-120 min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Coloración')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mechas -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header text-center py-3">
+                                    <i class="fas fa-brush service-icon"></i>
+                                    <h3 class="card-title">Mechas & Balayage</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Técnicas avanzadas de iluminación para tu cabello.</p>
+                                    <p class="price mb-3">Desde $65.00</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 120-180 min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Mechas & Balayage')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tratamientos & Extras -->
+                <div class="tab-pane fade" id="tratamientos" role="tabpanel">
+                    <!-- Subdivisiones para Tratamientos -->
+                    <ul class="nav nav-tabs mb-4 justify-content-center" id="tratamientosSubTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="hidratacion-tab" onclick="mostrarSubCategoria('hidratacion', 'tratamientosSubTabContent')" role="tab">Hidratación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="keratina-tab" onclick="mostrarSubCategoria('keratina', 'tratamientosSubTabContent')" role="tab">Keratina</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Contenido de las subdivisiones -->
+                    <div class="tab-content" id="tratamientosSubTabContent">
+                        <!-- Hidratación -->
+                        <div class="tab-pane fade show active" id="hidratacion" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card service-card shadow-sm">
+                                        <div class="card-header text-center py-3">
+                                            <i class="fas fa-tint service-icon"></i>
+                                            <h3 class="card-title">Hidratación Básica</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Tratamiento hidratante para recuperar cabello seco y dañado.</p>
+                                            <p class="price mb-3">Desde $35.00</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">Duración: 45 min</small>
+                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Hidratación Básica')">Reservar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card service-card shadow-sm">
+                                        <div class="card-header text-center py-3">
+                                            <i class="fas fa-tint service-icon"></i>
+                                            <h3 class="card-title">Hidratación Profunda</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Tratamiento intensivo con mascarillas de alta gama.</p>
+                                            <p class="price mb-3">Desde $50.00</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">Duración: 60 min</small>
+                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Hidratación Profunda')">Reservar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Keratina -->
+                        <div class="tab-pane fade" id="keratina" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card service-card shadow-sm">
+                                        <div class="card-header text-center py-3">
+                                            <i class="fas fa-pump-soap service-icon"></i>
+                                            <h3 class="card-title">Keratina Express</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Tratamiento rápido de keratina para mejorar la estructura del cabello.</p>
+                                            <p class="price mb-3">Desde $70.00</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">Duración: 90 min</small>
+                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Keratina Express')">Reservar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Fin de navbar -->
-         <!--inicio btn flotantes-->
-         <div class="text-center">
-    </div>
-        <div class="social_media_div">
-            <ul class="icons_list">
-                <li>
-                    <a href="javascript:void(0)"><i class="facebook-icon fab fa-facebook-f"></i></a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)"><i class="googleplus-icon fab fa-google-plus-g"></i></a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)"><i class="linkedin-icon fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)"><i class="twitter-icon fab fa-twitter"></i></a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)"><i class="instagram-icon fab fa-instagram"></i></a>
-                </li>
-            </ul>
-        </div>
-        <!--Fin btn flotantes-->
-        <!--importar scripts -->
-    <script src="/ArchivosJS/inicio.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </section>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS (Bootstrap 4 requires jQuery) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Función para mostrar las categorías principales
+        function mostrarCategoria(categoriaId) {
+            // Ocultar todas las pestañas de categorías
+            document.querySelectorAll('#servicesTabContent > .tab-pane').forEach(tab => {
+                tab.classList.remove('show', 'active');
+            });
+            
+            // Mostrar la pestaña seleccionada
+            document.getElementById(categoriaId).classList.add('show', 'active');
+            
+            // Actualizar estado de las pestañas
+            document.querySelectorAll('#servicesTabs .nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.getElementById(categoriaId + '-tab').classList.add('active');
+            
+            // Si es la sección de cortes, asegurar que se muestre la primera subcategoría
+            if (categoriaId === 'cortes') {
+                // Activar subcategoría por defecto
+                document.getElementById('corte-damas').classList.add('show', 'active');
+                document.getElementById('corte-damas-tab').classList.add('active');
+            }
+            
+            // Si es la sección de tratamientos, asegurar que se muestre la primera subcategoría
+            if (categoriaId === 'tratamientos') {
+                // Activar subcategoría por defecto
+                document.getElementById('hidratacion').classList.add('show', 'active');
+                document.getElementById('hidratacion-tab').classList.add('active');
+            }
+        }
+        
+        // Función para mostrar las subcategorías
+        function mostrarSubCategoria(subCategoriaId, contenedorSubCategoriaId) {
+            // Ocultar todas las pestañas de subcategorías en el contenedor
+            document.querySelectorAll(`#${contenedorSubCategoriaId} > .tab-pane`).forEach(tab => {
+                tab.classList.remove('show', 'active');
+            });
+            
+            // Mostrar la subcategoría seleccionada
+            document.getElementById(subCategoriaId).classList.add('show', 'active');
+            
+            // Actualizar estado de las pestañas
+            let contenedorPadre = document.getElementById(contenedorSubCategoriaId).previousElementSibling;
+            contenedorPadre.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.getElementById(subCategoriaId + '-tab').classList.add('active');
+        }
+        
+        // Función para reservar servicio
+        function reservarServicio(nombreServicio) {
+            alert(`Has reservado el servicio: ${nombreServicio}`);
+            // Aquí podrías añadir más funcionalidad como redirigir a una página de reserva
+            // o mostrar un formulario modal para completar la reserva
+        }
+        
+        // Inicializar la página mostrando la categoría de cortes por defecto
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ya se muestra por defecto, pero si se quiere forzar:
+            // mostrarCategoria('cortes');
+        });
+    </script>
 </body>
 </html>
