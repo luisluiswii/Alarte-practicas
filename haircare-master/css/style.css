@@ -40,6 +40,14 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+
+.thick-divider {
+  height: 3px;
+  background-color: #76b992;
+  margin: 30px 0;
+  border: none;}
+
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -303,7 +311,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 50;
   line-height: 1.2; }
 
 h1, .h1 {
@@ -3592,13 +3600,9 @@ input[type="button"].btn-block {
     .navbar-expand-md .navbar-toggler {
       display: none; } }
 
-@media (max-width: 991.98px) {
-  .navbar-expand-lg > .container,
-  .navbar-expand-lg > .container-fluid {
-    padding-right: 0;
-    padding-left: 0; } }
 
-@media (min-width: 992px) {
+
+@media (min-width: 1150px) {
   .navbar-expand-lg {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -8158,6 +8162,7 @@ a {
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.5;
+  font-family: d;
   color: black;
   font-weight: 400; }
 
@@ -8395,7 +8400,7 @@ h1, h2, h3, h4, h5,
     letter-spacing: 2px; }
   .slider-text h1 {
     font-size: 5vw;
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
     line-height: 1;
     font-weight: 700;
