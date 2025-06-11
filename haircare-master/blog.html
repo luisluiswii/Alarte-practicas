@@ -68,8 +68,287 @@
         </div>
       </div>
       </section>
+<body>
 
 
+    <!-- Banner de Servicios -->
+    <section class="wedding-banner">
+        <div class="container">
+            <h2>Tu Look Perfecto para el Día de tu Boda</h2>
+            <p class="lead">Diseñamos peinados y maquillaje que reflejan tu personalidad</p>
+            <a href="https://wa.me/+34664596917?text=Hola,%20quiero%20información%20para%20servicios%20de%20novias" 
+               target="_blank" 
+               class="btn btn-primary btn-lg">
+                ¡Reserva cita ya!
+            </a>
+        </div>
+    </section>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Bodas - Peluquería</title>
+    <style>
+        /* ESTILOS GENERALES */
+        .wedding-gallery {
+            font-family: 'Arial', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .wedding-gallery-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+        
+        /* CONTENEDOR DEL CARRUSEL */
+        .wedding-carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* CONTENEDOR DE IMÁGENES */
+        .wedding-carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 500px;
+        }
+        
+        /* IMÁGENES */
+        .wedding-carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+        
+        .wedding-carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* CONTROLES DE NAVEGACIÓN */
+        .wedding-carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.7);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .wedding-carousel-button.prev {
+            left: 15px;
+        }
+        
+        .wedding-carousel-button.next {
+            right: 15px;
+        }
+        
+        /* INDICADORES (PUNTOS) */
+        .wedding-carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .wedding-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            opacity: 0.3;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        
+        .wedding-indicator.active {
+            opacity: 1;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .wedding-carousel-track {
+                height: 400px;
+            }
+            
+            .wedding-gallery-title {
+                font-size: 1.8em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .wedding-carousel-track {
+                height: 300px;
+            }
+            
+            .wedding-carousel-button {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+            }
+            
+            .wedding-indicator {
+                width: 10px;
+                height: 10px;
+            }
+        }
+        .wedding-banner {
+            text-align: center;
+            padding: 40px 0;
+        }
+    </style>
+    <section class="wedding-gallery">
+        <h2 class="wedding-gallery-title">Nuestra galeria de bodas </h2>
+        
+        <div class="wedding-carousel-container">
+            <div class="wedding-carousel-track">
+                <!-- IMAGEN 1 -->
+                <div class="wedding-carousel-slide">
+                    <img src="/imagenes/bodas/boda1.png" alt="Peinado de novia elegante">
+                </div>
+                
+                <!-- IMAGEN 2 -->
+                <div class="wedding-carousel-slide">
+                    <img src="/imagenes/bodas/WhatsApp Image 2025-06-09 at 16.49.00.jpeg" alt="Peinado de novia clásico">
+                </div>
+                
+                <!-- IMAGEN 3 -->
+                <div class="wedding-carousel-slide">
+                    <img src="/imagenes/bodas/WhatsApp Image 2025-06-09 at 16.49.01 (1).jpeg" alt="Peinado de novia bohemio">
+                </div>
+                
+                <!-- IMAGEN 4 -->
+                <div class="wedding-carousel-slide">
+                    <img src="/imagenes/bodas/WhatsApp Image 2025-06-09 at 16.49.01 (2).jpeg" alt="Peinado de novia moderno">
+                </div>
+                
+                <!-- IMAGEN 5 -->
+                <div class="wedding-carousel-slide">
+                    <img src="/imagenes/bodas/WhatsApp Image 2025-06-09 at 16.49.01 (3).jpeg" alt="Peinado de novia romántico">
+                </div>
+                
+                <!-- IMAGEN 6 -->
+                <div class="wedding-carousel-slide">
+                    <img src="/imagenes/bodas/boda2.png" alt="Peinado de novia vintage">
+                </div>
+                
+                <!-- IMAGEN 7 -->
+                <div class="wedding-carousel-slide">
+                    <img src="/imagenes/bodas/WhatsApp Image 2025-06-09 at 16.49.02 (1).jpeg" alt="Peinado de novia con flores">
+                </div>
+                
+                <!-- IMAGEN 8 -->
+                <div class="wedding-carousel-slide">
+                    <img src="/imagenes/bodas/boda3.png" alt="Peinado de novia recogido">
+                </div>
+                
+                <!-- IMAGEN 9 -->
+                <div class="wedding-carousel-slide">
+                    <img src="/imagenes/bodas/boda4.png" alt="Peinado de novia semi-recogido">
+                </div>
+                
+                <!-- IMAGEN 10 -->
+                <div class="wedding-carousel-slide">
+                    <img src="/imagenes/bodas/boda5.png"  alt="Peinado de novia con velo">
+                </div>
+            </div>
+            
+            <!-- BOTONES DE NAVEGACIÓN -->
+            <button class="wedding-carousel-button prev">&#10094;</button>
+            <button class="wedding-carousel-button next">&#10095;</button>
+        </div>
+        
+        <!-- INDICADORES -->
+        <div class="wedding-carousel-indicators">
+            <span class="wedding-indicator active" data-index="0"></span>
+            <span class="wedding-indicator" data-index="1"></span>
+            <span class="wedding-indicator" data-index="2"></span>
+            <span class="wedding-indicator" data-index="3"></span>
+            <span class="wedding-indicator" data-index="4"></span>
+            <span class="wedding-indicator" data-index="5"></span>
+            <span class="wedding-indicator" data-index="6"></span>
+            <span class="wedding-indicator" data-index="7"></span>
+            <span class="wedding-indicator" data-index="8"></span>
+            <span class="wedding-indicator" data-index="9"></span>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.wedding-carousel-track');
+            const slides = Array.from(document.querySelectorAll('.wedding-carousel-slide'));
+            const nextButton = document.querySelector('.wedding-carousel-button.next');
+            const prevButton = document.querySelector('.wedding-carousel-button.prev');
+            const indicators = document.querySelectorAll('.wedding-indicator');
+            
+            let currentIndex = 0;
+            const slideCount = slides.length;
+            
+            // Función para actualizar la posición del carrusel
+            function updateCarousel() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Actualizar indicadores
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // Navegación siguiente
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateCarousel();
+            });
+            
+            // Navegación anterior
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateCarousel();
+            });
+            
+            // Navegación por indicadores
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = parseInt(indicator.getAttribute('data-index'));
+                    updateCarousel();
+                });
+            });
+            
+            // Autoplay (opcional)
+            let autoplay = setInterval(() => {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateCarousel();
+            }, 5000);
+            
+            // Pausar autoplay al interactuar
+            track.addEventListener('mouseenter', () => {
+                clearInterval(autoplay);
+            });
+            
+            track.addEventListener('mouseleave', () => {
+                autoplay = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % slideCount;
+                    updateCarousel();
+                }, 5000);
+            });
+        });
+    </script>
 
 
 <footer class="ftco-footer ftco-section">
