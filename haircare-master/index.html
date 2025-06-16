@@ -26,21 +26,59 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+        <style>
+        .modal-fondo {
+        color: #ccc;
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        }
+
+        .modal-contenido {
+        color: #f1f1f1;
+        background: #3f3f3f;
+        padding: 20px;
+        max-width: 700px;
+        border-radius: 10px;
+        text-align: center;
+        }
+
+        .cerrar-btn {
+        margin-top: 15px;
+        padding: 8px 16px;
+        background: #6ebb8e;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        .cerrar-btn:hover {
+        background-color: #0056b3;
+        }
+        
+    </style>
   </head>
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html"><span><img class="imagen-navbar-light" src="/imagenes/logo3BgRemoved.png" width="60px" height="60px"></span><img src="/imagenes/logo4BgRemoved.png" width="150px" height="80px"></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
+	    <img src="/imagenes/icons/icono_menu.png" height="20px" width="20px" style="padding-bottom: 3px"> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	        	<li class="nav-item active"><a href="index.html" class="nav-link">Inicio</a></li>
 	        	<li class="nav-item"><a href="services.html" class="nav-link">Servicios</a></li>
-				<li class="nav-item"><a href="products.html" class="nav-link">Productos</a></li>
 	        	<li class="nav-item"><a href="gallery.html" class="nav-link">Galería</a></li>
+                 <li class="nav-item"><a href="about.html" class="nav-link">Conocenos</a></li>
 	        	<li class="nav-item"><a href="blog.html" class="nav-link">Novias</a></li>
 	            <li class="nav-item"><a href="contact.html" class="nav-link">Contacto</a></li>
 	        </ul>
@@ -96,42 +134,135 @@
 			</div>
 		</section>
     
-      <section class="services-section ftco-section">
-        <div class="container">
-          <div class="row justify-content-center pb-3">
-            <div class="col-md-10 heading-section text-center ftco-animate">
-              <span class="subheading">Servicios</span>
-              <h2 class="mb-4">Menu de servicios</h2>
-            </div>
+     <section class="services-section ftco-section">
+  <div class="container">
+    <div class="row justify-content-center pb-3">
+      <div class="col-md-10 heading-section text-center ftco-animate">
+        <span class="subheading">Servicios</span>
+        <h2 class="mb-4">Menu de servicios</h2>
+      </div>
+    </div>
+    <div class="row no-gutters d-flex">
+      <!-- Pelo -->
+      <div class="col-12 col-md-6 d-flex align-items-stretch mb-4" onclick="toggleServiceList('pelo')">
+        <div class="media block-6 services d-block text-center w-100 service-card">
+          <div class="icon" style="margin-top: 20px; margin-bottom: 15px;">
+            <img src="/imagenes/tijeras_icono.png" width="40px" height="40px">
           </div>
-          <div class="row no-gutters d-flex">
-            <div class="col-md-4 d-flex align-items-stretch" onclick="toggleServiceList('pelo')">
-              <div class="media block-6 services d-block text-center w-100 service-card">
-                <div class="icon" style="margin-top: 20px; margin-bottom: 15px;"><img src="/imagenes/tijeras_icono.png" width="40px" height="40px"></div>
-                <div class="media-body">
-                  <h3 class="heading mb-3">Pelo</h3>
-                </div>
-              </div>    
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch" onclick="toggleServiceList('depilacion')">
-              <div class="media block-6 services d-block text-center w-100 service-card" >
-                <div class="icon" style="margin-top: 15px; margin-bottom: 15px;"><img src="/imagenes/cera.png" width="40px" height="40px"></div>
-                <div class="media-body">
-                  <h3 class="heading mb-3">Depilacion</h3>
-                  <p></p>
-                </div>
-              </div>      
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch" onclick="toggleServiceList('facial')">
-              <div class="media block-6 services d-block text-center w-100 service-card">
-                <div class="icon" style="margin-top: 10px; margin-bottom: 7px;"><img src="/imagenes/facial_icono.png" width="55px" height="55px"></div>
-                <div class="media-body">
-                  <h3 class="heading mb-3">Facial</h3>
-                </div>
-              </div>      
-            </div>
+          <div class="media-body">
+            <h3 class="heading mb-3">Pelo</h3>
+          </div>
         </div>
-      </section>
+      </div>
+
+      <!-- Facial -->
+      <div class="col-12 col-md-6 d-flex align-items-stretch mb-4" onclick="toggleServiceList('facial')">
+        <div class="media block-6 services d-block text-center w-100 service-card">
+          <div class="icon" style="margin-top: 10px; margin-bottom: 7px;">
+            <img src="/imagenes/facial_icono.png" width="55px" height="55px">
+          </div>
+          <div class="media-body">
+            <h3 class="heading mb-3">Facial</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section ftco-team">
+			<div class="container-fluid px-md-5">
+				<div class="row justify-content-center pb-3">
+			  <div class="col-md-10 heading-section text-center ftco-animate">
+				  <span class="subheading">Directora Artistica</span>
+				<h2 class="mb-4">Nuestros profesionales</h2>
+			  </div>
+			</div>
+            <div class="row">
+            <div class="col-md-12 ftco-animate">
+                <div class="carousel-team owl-carousel">
+                <div class="item">
+                    <a class="team text-center" data-modal="modal1">
+                    <div class="img" style="background-image: url('empleado1.jpg');"></div>
+                    <h2>Paloma</h2>
+                    
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="team text-center" data-modal="modal2">
+                    <div class="img" style="background-image: url('empleado2.jpg');"></div>
+                    <h2>Mari</h2>
+                    
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="team text-center" data-modal="modal3">
+                    <div class="img" style="background-image: url('empleado3.jpg');"></div>
+                    <h2>Isa</h2>
+                    
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="team text-center" data-modal="modal4">
+                    <div class="img" style="background-image: url('empleado4.jpg');"></div>
+                    <h2>Alejandra</h2>
+                    
+                    </a>
+                </div>
+                </div>
+            </div>
+            </div>
+			</div>
+		</section>
+
+        <!-- Modales personalizados -->
+        <div id="modal1" class="modal-fondo">
+        <div class="modal-contenido">
+            <h3 style="color: #a1d3ac;">Paloma</h3>
+            <p>Con más de 10 años de experiencia en Alarte se ha ido haciendo una oficial de Peluquería excelente.
+                Empezó  siendo una niña como clienta y ya se le veía su pasión por la moda y la belleza.
+                Ella hizo las prácticas de peluquería en Alarte y finalmente se quedó trabajando como una más de la plantilla.
+                A pesar de su juventud, siempre ha demostrado responsabilidad y respeto hacia su trabajo y sus compañeras</p>
+                <p>
+                Su carrera profesional ha ido siempre viento en popa, por su  visión  creativa, moderna y actual, referente para muchos de nuestros clientes como si de una influensers se tratatara, creando así un vínculo cercano y de confianza para nuestros clientes y dándoles  seguridad  de lucir  lo que ella les propone.
+            </p>
+            <button class="cerrar-btn">Cerrar</button>
+        </div>
+        </div>
+
+        <div id="modal2" class="modal-fondo">
+        <div class="modal-contenido">
+            <h3 style="color: #a1d3ac;">Mari</h3>
+            <p>Os presentamos a Mari, empezó en Alarte hace 12 años.
+            Su función principal siempre ha sido atender las llamadas, agendar citas y todos los relacionado con la recepción, aunque en la actualidad es una experta en la zona del lava cabezas, aplicando color y peinando melenas con  ondas es   Insuperable.
+            </p><p>
+            Es la que siempre se acuerda de todos los productos que hay que pedir, todas las llamadas que hay por hacer, todas las citas que quedan por agendar, si ha puesto alguna lavadora y la tiene que tender…en definitiva sirve para todo…. Trabajadora incansable aun cuando no se encuentra bien y es de las que deja los problemas en casa para poner la mejor de las caras a cada cliente que entra por la puerta
+</p>
+            <button class="cerrar-btn">Cerrar</button>
+        </div>
+        </div>
+
+        <div id="modal3" class="modal-fondo">
+        <div class="modal-contenido">
+            <h3 style="color: #a1d3ac;">Isa</h3>
+            <p>Ella es la más joven de qu Alarte pero viene pisando fuerte.
+                Respetuosa, resiliente, educada, cariñosa y con una empatía envidiable
+                Ella, empezó a trabajar en Alarte antes de terminar su formación, porque desde el principio demostró sus ganas por la profesión y su interés por aprender. Más adelante hizo las prácticas en la peluquería y finalmente terminó siendo una trabajadora más de la misma.
+            </p><p>
+                La maga de las trenzas y una paciencia absoluta realizando alisadores y tratamientos
+                Su potencial como peluquera es inmenso y con constancia y esfuerzo conseguirá todo lo que se proponga.
+                </p>
+            <button class="cerrar-btn">Cerrar</button>
+        </div>
+        </div>
+
+        <div id="modal4" class="modal-fondo">
+        <div class="modal-contenido">
+            <h3 style="color: #a1d3ac;">Empleado/a 4</h3>
+            <p>Especialista en cortes modernos y coloración.</p>
+            <button class="cerrar-btn">Cerrar</button>
+        </div>
+        </div>
 
 	<div class="thick-divider"></div>
 
@@ -150,11 +281,11 @@
     				<div class="project">
 	    				<img src="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.40 (1).jpeg" class="img-fluid" alt="Colorlib Template">
 	    				<div class="text">
-	    					<span>Estilismo</span>
-	    					<h3><a href="project.html">Barba</a></h3>
+	    					<span></span>
+	    					<h3><a href="project.html"></a></h3>
 	    				</div>
-	    				<a href="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.40 (1).jpeg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
+	    				<a href="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.40 (1).jpeg" class="icon image-popup d-flex justify-content-center align-items-center" >
+	    					<img src="/imagenes/icons/icono_expand.png" width="20px" height="20px">
 	    				</a>
     				</div>
     			</div>
@@ -162,11 +293,11 @@
     				<div class="project">
 	    				<img src="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.40.jpeg" class="img-fluid" alt="Colorlib Template">
 	    				<div class="text">
-	    					<span>Belleza</span>
-	    					<h3><a href="project.html">Corte de pelo</a></h3>
+	    					<span></span>
+	    					<h3><a href="project.html"></a></h3>
 	    				</div>
 	    				<a href="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.40.jpeg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
+	    					<img src="/imagenes/icons/icono_expand.png" width="20px" height="20px">
 	    				</a>
     				</div>
     			</div>
@@ -174,11 +305,11 @@
     				<div class="project">
 	    				<img src="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.41 (1).jpeg" class="img-fluid" alt="Colorlib Template">
 	    				<div class="text">
-	    					<span>Belleza</span>
-	    					<h3><a href="project.html">Estilista de pelo</a></h3>
+	    					<span></span>
+	    					<h3><a href="project.html"></a></h3>
 	    				</div>
 	    				<a href="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.41 (1).jpeg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
+	    					<img src="/imagenes/icons/icono_expand.png" width="20px" height="20px">
 	    				</a>
     				</div>
     			</div>
@@ -186,11 +317,11 @@
     				<div class="project">
 	    				<img src="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.40 (4).jpeg" class="img-fluid" alt="Colorlib Template">
 	    				<div class="text">
-	    					<span>Belleza</span>
-	    					<h3><a href="project.html">Corte de pelo</a></h3>
+	    					<span></span>
+	    					<h3><a href="project.html"></a></h3>
 	    				</div>
 	    				<a href="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.40 (4).jpeg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
+	    					<img src="/imagenes/icons/icono_expand.png" width="20px" height="20px">
 	    				</a>
     				</div>
     			</div>
@@ -198,11 +329,11 @@
     				<div class="project">
 	    				<img src="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.41.jpeg" class="img-fluid" alt="Colorlib Template">
 	    				<div class="text">
-	    					<span>Belleza</span>
-	    					<h3><a href="project.html">Maquillaje</a></h3>
+	    					<span></span>
+	    					<h3><a href="project.html"></a></h3>
 	    				</div>
 	    				<a href="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.41.jpeg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
+	    					<img src="/imagenes/icons/icono_expand.png" width="20px" height="20px">
 	    				</a>
     				</div>
     			</div>
@@ -210,11 +341,11 @@
     				<div class="project">
 	    				<img src="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.43.jpeg" class="img-fluid" alt="Colorlib Template">
 	    				<div class="text">
-	    					<span>Fashion</span>
-	    					<h3><a href="project.html">Modelo</a></h3>
+	    					<span></span>
+	    					<h3><a href="project.html"></a></h3>
 	    				</div>
 	    				<a href="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.45.jpeg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
+	    				<img src="/imagenes/icons/icono_expand.png" width="20px" height="20px">
 	    				</a>
     				</div>
     			</div>
@@ -222,11 +353,11 @@
     				<div class="project">
 	    				<img src="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.48.jpeg" class="img-fluid" alt="Colorlib Template">
 	    				<div class="text">
-	    					<span>Belleza</span>
-	    					<h3><a href="project.html">Maquillaje</a></h3>
+	    					<span></span>
+	    					<h3><a href="project.html"></a></h3>
 	    				</div>
 	    				<a href="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.48.jpeg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
+	    					<img src="/imagenes/icons/icono_expand.png" width="20px" height="20px">
 	    				</a>
     				</div>
     			</div>
@@ -234,11 +365,11 @@
     				<div class="project">
 	    				<img src="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.49.jpeg" class="img-fluid" alt="Colorlib Template">
 	    				<div class="text">
-	    					<span>Belleza</span>
-	    					<h3><a href="project.html">Maquillaje</a></h3>
+	    					<span></span>
+	    					<h3><a href="project.html"></a></h3>
 	    				</div>
 	    				<a href="/imagenes/galeria/WhatsApp Image 2025-06-04 at 17.52.49.jpeg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
+	    				<img src="/imagenes/icons/icono_expand.png" width="20px" height="20px">
 	    				</a>
     				</div>
     			</div>
@@ -247,6 +378,7 @@
 		</section>
 
 		<head>
+    
 
     <title>Carrusel de Comentarios - 10 Testimonios</title>
     <!-- Font Awesome para íconos -->
@@ -703,7 +835,6 @@
                             <ul class="list-unstyled">
                                 <li><a href="index.html" class="py-2 d-block">Inicio</a></li>
                                 <li><a href="services.html" class="py-2 d-block">Servicios</a></li>
-                                <li><a href="products.html" class="py-2 d-block">Productos</a></li>
                                 <li><a href="gallery.html" class="py-2 d-block">Galería</a></li>
                             </ul>
                         </div>
@@ -786,6 +917,33 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+    <script>
+  // Abrir el modal correspondiente
+  document.querySelectorAll('.team').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modalId = el.getAttribute('data-modal');
+      const modal = document.getElementById(modalId);
+      if (modal) modal.style.display = 'flex';
+    });
+  });
+
+  // Cerrar modal con el botón
+  document.querySelectorAll('.cerrar-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.modal-fondo').style.display = 'none';
+    });
+  });
+
+  // Cerrar modal al hacer clic fuera del contenido
+  document.querySelectorAll('.modal-fondo').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+</script>
     
   </body>
 </html>

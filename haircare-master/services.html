@@ -115,8 +115,6 @@
           cursor: pointer;
       }
   </style>
-  </head>
-  <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html"><span><img class="imagen-navbar-light" src="/imagenes/logo3BgRemoved.png" width="60px" height="60px"></span><img src="/imagenes/logo4BgRemoved.png" width="150px" height="80px"></a>
@@ -128,7 +126,6 @@
 	        <ul class="navbar-nav ml-auto">
 	        	<li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
 	        	<li class="nav-item active"><a href="services.html" class="nav-link">Servicios</a></li>
-				<li class="nav-item"><a href="products.html" class="nav-link">Productos</a></li>
 	        	<li class="nav-item"><a href="gallery.html" class="nav-link">Galería</a></li>
 	        	<li class="nav-item"><a href="about.html" class="nav-link">Conocenos</a></li>
 	        	<li class="nav-item"><a href="blog.html" class="nav-link">Novias</a></li>
@@ -158,674 +155,35 @@
         </div>
       </div>
       </section>
-    
-<section class="services-section ftco-section">
-  <div class="container">
-    <div class="row justify-content-center pb-3">
-      <div class="col-md-10 heading-section text-center ftco-animate">
-        <span class="subheading">Servicios</span>
-        <h2 class="mb-4">Menu de servicios</h2>
-      </div>
-    </div>
-    <div class="row no-gutters d-flex">
-      <!-- Pelo -->
-      <div class="col-12 col-md-6 d-flex align-items-stretch mb-4" onclick="toggleServiceList('pelo')">
-        <div class="media block-6 services d-block text-center w-100 service-card">
-          <div class="icon" style="margin-top: 20px; margin-bottom: 15px;">
-            <img src="/imagenes/tijeras_icono.png" width="40px" height="40px">
-          </div>
-          <div class="media-body">
-            <h3 class="heading mb-3">Pelo</h3>
-          </div>
-        </div>
-      </div>
-
-      <!-- Facial -->
-      <div class="col-12 col-md-6 d-flex align-items-stretch mb-4" onclick="toggleServiceList('facial')">
-        <div class="media block-6 services d-block text-center w-100 service-card">
-          <div class="icon" style="margin-top: 10px; margin-bottom: 7px;">
-            <img src="/imagenes/facial_icono.png" width="55px" height="55px">
-          </div>
-          <div class="media-body">
-            <h3 class="heading mb-3">Facial</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-      <section id="servicios" class="py-5" style="margin-top: -60px;">
+    <section class="services-section ftco-section">
         <div class="container">
-         
-            
-            <!-- Tab Content  -->
-            <div class="tab-content" id="servicesTabContent">
-                <!-- Cortes & Peinados nuevo3  -->
-                <div class="tab-pane fade show active" id="cortes" role="tabpanel">
-                    <!-- Subdivisiones para Cortes & Peinados -->
-                    <ul class="nav nav-tabs mb-4 justify-content-center" id="corteSubTabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="color-tab" onclick="mostrarSubCategoria('color', 'corteSubTabContent')" role="tab">Color</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="alisadores-tab" onclick="mostrarSubCategoria('alisadores', 'corteSubTabContent')" role="tab">Alisadores</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="cut-tab" onclick="mostrarSubCategoria('cut', 'corteSubTabContent')" role="tab">Cortes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="peinados-tab" onclick="mostrarSubCategoria('peinados', 'corteSubTabContent')" role="tab">Peinados</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a class="nav-link" id="tratamientos-capilares-tab" onclick="mostrarSubCategoria('tratamientos-capilares', 'corteSubTabContent')" role="tab">Tratamientos Capilares</a>
-                        </li>
-                    </ul>
-                    
-                    <!-- Contenido de las subdivisiones -->
-                    <div class="tab-content" id="corteSubTabContent">
-                        <!-- Color -->
-                        <div class="tab-pane fade show active" id="color" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header text-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Tinte</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Tinte de pelo básico.</p>
-                                            <p class="price mb-3">Precio 180€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 3h 30 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header text-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Tratamiento lavado Champú Especial</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Lavado de cabello basico rapido y profesional para todo tipo de estilos</p>
-                                            <p class="price mb-3">Precio: 6,90€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 15 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                                 <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header text-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Tratamiento lavado Champú Especial</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Lavado de cabello basico rapido y profesional para todo tipo de estilos</p>
-                                            <p class="price mb-3">Precio: 6,90€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 15 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header text-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Tratamiento lavado Champú Especial</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Lavado de cabello basico rapido y profesional para todo tipo de estilos</p>
-                                            <p class="price mb-3">Precio: 6,90€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 15 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                                 <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header text-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Tratamiento lavado Champú Especial</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Lavado de cabello basico rapido y profesional para todo tipo de estilos</p>
-                                            <p class="price mb-3">Precio: 6,90€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 15 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div>
+            <div class="row justify-content-center pb-3">
+                <div class="col-md-10 heading-section text-center ftco-animate">
+                    <span class="subheading">Servicios</span>
+                    <h2 class="mb-4">Menú de servicios</h2>
+                </div>
+            </div>
+            <div class="row no-gutters d-flex">
+                <!-- Pelo -->
+                <div class="col-12 col-md-6 d-flex align-items-stretch mb-4" onclick="showServices('pelo')">
+                    <div class="media block-6 services d-block text-center w-100 service-card">
+                        <div class="icon" style="margin-top: 20px; margin-bottom: 15px;">
+                            <img src="/imagenes/tijeras_icono.png" width="40px" height="40px" alt="Icono pelo">
                         </div>
-                        <!--Alisadores-->
-                        <div class="tab-pane fade" id="alisadores" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Botox capilar</h3>
-                                        </div>
-                                        <div class="card-body d-flex flex-column">
-                                            <p class="card-text">Tratamiento de brillo para cabello corto</p>
-                                            <p class="mt-auto price mb-3">Precio: 60€</p>
-                                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1h 45min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Lavado</h3>
-                                        </div>
-                                        <div class="card-body d-flex flex-column">
-                                            <p class="card-text">Lavado de cabello basico rapido y profesional para todo tipo de estilos</p>
-                                            <p class="mt-auto price mb-3">Precio: 6,90€</p>
-                                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 15 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header text-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Tratamiento lavado Champú Especial</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Lavado de cabello basico rapido y profesional para todo tipo de estilos</p>
-                                            <p class="price mb-3">Precio: 6,90€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 15 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div>
+                        <div class="media-body">
+                            <h3 class="heading mb-3">Pelo</h3>
                         </div>
-                        <!--Peinados-->
-                        <div class="tab-pane fade" id="peinados" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Moldeador</h3>
-                                        </div>
-                                        <div class="card-body d-flex flex-column">
-                                            <p class="card-text">Moldeador</p>
-                                            <p class="mt-auto price mb-3">Precio: 70€</p>
-                                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 3h</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Lavado y Peinado</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text"> limpieza y acondicionamiento del cabello, seguido de un peinado</p>
-                                            <p class="price mb-3">Precio: 18€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 45 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>  
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Peinado De Ondas</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Peinado de ondas con los productos mas profesionales</p>
-                                            <p class="price mb-3">Precio: 20€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1 h</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Ondas Con Plancha</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Peinado de ondas con plancha usando los productos mas profesionales</p>
-                                            <p class="price mb-3">Precio: 18€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1 h</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div>
+                    </div>
+                </div>
+
+                <!-- Facial -->
+                <div class="col-12 col-md-6 d-flex align-items-stretch mb-4" onclick="showServices('facial')">
+                    <div class="media block-6 services d-block text-center w-100 service-card">
+                        <div class="icon" style="margin-top: 10px; margin-bottom: 7px;">
+                            <img src="/imagenes/facial_icono.png" width="55px" height="55px" alt="Icono facial">
                         </div>
-                        <!--Mechas y decoloracion-->
-                        <div class="tab-pane fade" id="mechas-decoloracion" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Mechas</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Coloración capilar con nuestros productos y tintes de la mejor calidad</p>
-                                            <p class="price mb-3">Precio: 45€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 4 h 45 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                        <!--Cortes-->
-                        <div class="tab-pane fade" id="cut" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Corte mujer</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Corte basico para mujer con los mejores utensilios de la peluquería</p>
-                                            <p class="price mb-3">Precio: 27,90€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1 h</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Elumen Pelo Corto</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Coloración para pelo corto, resultados intensos, duraderos y saludables</p>
-                                            <p class="price mb-3">Precio: 30€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 15 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Elumen Pelo Corto</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Coloración para pelo corto, resultados intensos, duraderos y saludables</p>
-                                            <p class="price mb-3">Precio: 30€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 15 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Tratamientos capilares-->
-                        <div class="tab-pane fade" id="tratamientos-capilares" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Botox capilar</h3>
-                                        </div>
-                                        <div class="card-body d-flex flex-column">
-                                            <p class="card-text">Tratamiento de brillo para cabello corto</p>
-                                            <p class="mt-auto price mb-3">Precio: 60€</p>
-                                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1h 45min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Lavado</h3>
-                                        </div>
-                                        <div class="card-body d-flex flex-column">
-                                            <p class="card-text">Lavado de cabello basico rapido y profesional para todo tipo de estilos</p>
-                                            <p class="mt-auto price mb-3">Precio: 6,90€</p>
-                                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 15 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header text-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Tratamiento lavado Champú Especial</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Lavado de cabello basico rapido y profesional para todo tipo de estilos</p>
-                                            <p class="price mb-3">Precio: 6,90€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 15 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header text-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Tratamiento Botox Capilar Pelo Medio</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Tratamiento de brillo para pelo medio</p>
-                                            <p class="price mb-3">Precio: 80€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1h</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header text-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Tratamiento Botox Capilar Pelo Largo</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Tratamiento de brillo para pelo largo</p>
-                                            <p class="price mb-3">Precio: 100€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1 h 30 min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header text-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Tratamiento Reconstrucción Capilar</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Tratamiento profundo que repara el cabello dañado desde el interior</p>
-                                            <p class="price mb-3">Precio: 30€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1 h</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-cut service-icon"></i>
-                                            <h3 class="card-title">Head Spa</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Exfoliación de cuero cabelludo, limpieza profunda con champú personalizado</p>
-                                            <p class="price mb-3">Precio 60€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1h</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte Básico')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>                                                                                                
-                
-                <!-- Tratamientos & Extras -->
-                <div class="tab-pane fade" id="tratamientos" role="tabpanel">
-                    <!-- Subdivisiones para Tratamientos -->
-                    <ul class="nav nav-tabs mb-4 justify-content-center" id="tratamientosSubTabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="Maquillaje Tradicional Y Permanente-tab" onclick="mostrarSubCategoria('Maquillaje Tradicional Y Permanente', 'tratamientosSubTabContent')" role="tab">Maquillaje Tradicional Y Permanente</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="Tratamientos Faciales-tab" onclick="mostrarSubCategoria('Tratamientos Faciales', 'tratamientosSubTabContent')" role="tab">Tratamientos Faciales</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="Definición Y Depilación De Cejas-tab" onclick="mostrarSubCategoria('Definición Y Depilación De Cejas', 'tratamientosSubTabContent')" role="tab">Definición Y Depilación De Cejas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="Extensiones Y Lifting De Pestañas-tab" onclick="mostrarSubCategoria('Extensiones Y Lifting De Pestañas', 'tratamientosSubTabContent')" role="tab">Extensiones Y Lifting De Pestañas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="Tinte De Pestañas Y Cejas-tab" onclick="mostrarSubCategoria('Tinte De Pestañas Y Cejas', 'tratamientosSubTabContent')" role="tab">Tinte De Pestañas Y Cejas</a>
-                        </li>
-                    </ul>
-                    
-                    <!-- Contenido de las subdivisiones -->
-                    <div class="tab-content" id="tratamientosSubTabContent">
-                        <!-- Hidratación -->
-                        <div class="tab-pane fade show active" id="Maquillaje Tradicional Y Permanente" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-tint service-icon"></i>
-                                            <h3 class="card-title">Maquillaje</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Aplicación profesional de cosméticos para realzar la belleza.</p>
-                                            <p class="price mb-3">Precio: 50€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1h</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Hidratación Básica')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-tint service-icon"></i>
-                                            <h3 class="card-title">Corte y marcado</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text"> Modelado y estilismo profesional del cabello para realzar tu imagen.</p>
-                                            <p class="price mb-3">Precio: 30€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1h 15min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Hidratación Profunda')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-tint service-icon"></i>
-                                            <h3 class="card-title">Peinado día festivo</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Los días festivos se aplicará un suplemento al precio habitual.</p>
-                                            <p class="price mb-3">Precio: 50€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 45min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Hidratación Básica')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Keratina -->
-                        <div class="tab-pane fade" id="Tratamientos Faciales" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-pump-soap service-icon"></i>
-                                            <h3 class="card-title">Higiene Facial</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Tratamiento de limpieza facial. Limpia los poros e hidrata la piel.</p>
-                                            <p class="price mb-3">Precio: 50€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1h</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Keratina Express')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="Definición Y Depilación De Cejas" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-pump-soap service-icon"></i>
-                                            <h3 class="card-title">Depilación Cejas</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Damos forma y definimos tus cejas para realzar tu mirada.</p>
-                                            <p class="price mb-3">Precio: 4€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 15min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Keratina Express')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="Extensiones Y Lifting De Pestañas" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-pump-soap service-icon"></i>
-                                            <h3 class="card-title">Elumen</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text"> Coloración capilar de alto rendimiento para un brillo intenso y duradero.</p>
-                                            <p class="price mb-3">Desde  35€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1h 30min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Keratina Express')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="Tinte De Pestañas Y Cejas" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-pump-soap service-icon"></i>
-                                            <h3 class="card-title">Tinte raiz</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Pestañas y cejas definidas con color duradero, complementando el tono de tu raíz.</p>
-                                            <p class="price mb-3">Precio:  25€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1h</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Keratina Express')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            
-                                            <h3 class="card-title">Tinte entero</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Transforma tu mirada con un color profundo y duradero en ambas.</p>
-                                            <p class="price mb-3">Precio: 30€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1h </small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Hidratación Básica')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            
-                                            <h3 class="card-title">Tinte y marcado</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text"> Intensifica tu mirada por semanas sin cuidados extra.</p>
-                                            <p class="price mb-3">Precio: 40€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1h 30min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Hidratación Básica')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card service-card shadow-sm">
-                                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
-                                            <i class="fas fa-tint service-icon"></i>
-                                            <h3 class="card-title">Tinte y corte</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">Color y definición para tus ojos.</p>
-                                            <p class="price mb-3">Precio: 40€</p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <small class="text-muted">Duración: 1h 30min</small>
-                                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Hidratación Básica')">Reservar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="media-body">
+                            <h3 class="heading mb-3">Facial</h3>
                         </div>
                     </div>
                 </div>
@@ -833,14 +191,517 @@
         </div>
     </section>
 
+    <!-- Sección de Servicios de Pelo -->
+    <section id="pelo-services" class="py-5" style="display: block; margin-top: -60px;">
+        <div class="container">
+            <!-- Subdivisiones para Cortes & Peinados -->
+            <ul class="nav nav-tabs mb-4 justify-content-center" id="peloSubTabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="color-tab" onclick="showPeloSubCategory('color')" role="tab">Color</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="alisadores-tab" onclick="showPeloSubCategory('alisadores')" role="tab">Alisadores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="cut-tab" onclick="showPeloSubCategory('cut')" role="tab">Cortes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="peinados-tab" onclick="showPeloSubCategory('peinados')" role="tab">Peinados</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" id="tratamientos-capilares-tab" onclick="showPeloSubCategory('tratamientos-capilares')" role="tab">Tratamientos Capilares</a>
+                </li>
+            </ul>
+            
+            <!-- Contenido de las subdivisiones -->
+            <div class="tab-content" id="peloSubTabContent">
+                <!-- Color -->
+                <div class="tab-pane fade show active" id="color" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header text-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Tinte</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Tinte de pelo básico.</p>
+                                    <p class="price mb-3">Precio 180€</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 3h 30 min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Tinte')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header text-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Mechas y decoración</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Lavado de cabello básico rápido y profesional para todo tipo de estilos</p>
+                                    <p class="price mb-3">Precio: 6,90€</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 15 min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Tratamiento lavado Champú Especial')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header text-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Elumen</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Lavado de cabello básico rápido y profesional para todo tipo de estilos</p>
+                                    <p class="price mb-3">Precio: 6,90€</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 15 min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Tratamiento lavado Champú Especial')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header text-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Matíz</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Lavado de cabello básico rápido y profesional para todo tipo de estilos</p>
+                                    <p class="price mb-3">Precio: 6,90€</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 15 min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Tratamiento lavado Champú Especial')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header text-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Barros</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Lavado de cabello básico rápido y profesional para todo tipo de estilos</p>
+                                    <p class="price mb-3">Precio: 6,90€</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 15 min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Tratamiento lavado Champú Especial')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Alisadores-->
+                <div class="tab-pane fade" id="alisadores" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Botox capilar</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Tratamiento de brillo para cabello corto</p>
+                                    <p class="mt-auto price mb-3">Precio: 60€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1h 45min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Botox capilar')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Keratine infusion</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Tratamiento de brillo para cabello corto</p>
+                                    <p class="mt-auto price mb-3">Precio: 60€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1h 45min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Botox capilar')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Moldeador</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Tratamiento de brillo para cabello corto</p>
+                                    <p class="mt-auto price mb-3">Precio: 60€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1h 45min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Botox capilar')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                
+                <!--Peinados-->
+                <div class="tab-pane fade" id="peinados" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Lavado y peinado</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Moldeador</p>
+                                    <p class="mt-auto price mb-3">Precio: 70€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 3h</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Moldeador')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Peinado dia festivo</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Moldeador</p>
+                                    <p class="mt-auto price mb-3">Precio: 70€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 3h</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Moldeador')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Ondas con plancha</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Moldeador</p>
+                                    <p class="mt-auto price mb-3">Precio: 70€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 3h</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Moldeador')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Recogido y semirecogido</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Moldeador</p>
+                                    <p class="mt-auto price mb-3">Precio: 70€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 3h</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Moldeador')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                
+                <!--Cortes-->
+                <div class="tab-pane fade" id="cut" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Corte mujer</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Corte básico para mujer con los mejores utensilios de la peluquería</p>
+                                    <p class="price mb-3">Precio: 27,90€</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1 h</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte mujer')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Corte caballero</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Corte básico para mujer con los mejores utensilios de la peluquería</p>
+                                    <p class="price mb-3">Precio: 27,90€</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1 h</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte mujer')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Repaso de corte</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Corte básico para mujer con los mejores utensilios de la peluquería</p>
+                                    <p class="price mb-3">Precio: 27,90€</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1 h</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Corte mujer')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Tratamientos capilares-->
+                <div class="tab-pane fade" id="tratamientos-capilares" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Lavado</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Tratamiento de brillo para cabello corto</p>
+                                    <p class="mt-auto price mb-3">Precio: 60€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1h 45min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Botox capilar')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Reconstrucción capilar</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Tratamiento de brillo para cabello corto</p>
+                                    <p class="mt-auto price mb-3">Precio: 60€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1h 45min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Botox capilar')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Head spa</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Tratamiento de brillo para cabello corto</p>
+                                    <p class="mt-auto price mb-3">Precio: 60€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1h 45min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Botox capilar')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Bayberry</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Tratamiento de brillo para cabello corto</p>
+                                    <p class="mt-auto price mb-3">Precio: 60€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1h 45min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Botox capilar')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Tratamientos goa</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Tratamiento de brillo para cabello corto</p>
+                                    <p class="mt-auto price mb-3">Precio: 60€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1h 45min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Botox capilar')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Detox</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Tratamiento de brillo para cabello corto</p>
+                                    <p class="mt-auto price mb-3">Precio: 60€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1h 45min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Botox capilar')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card service-card shadow-sm">
+                                <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                                    <i class="fas fa-cut service-icon"></i>
+                                    <h3 class="card-title">Inner</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Tratamiento de brillo para cabello corto</p>
+                                    <p class="mt-auto price mb-3">Precio: 60€</p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Duración: 1h 45min</small>
+                                        <button class="btn btn-primary btn-sm" onclick="reservarServicio('Botox capilar')">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Sección de Servicios Faciales (simplificada) -->
+    <section id="facial-services" class="py-5" style="display: none; margin-top: -60px;">
+        <div class="container">
+            <div class="row">
+                <!-- Maquillaje -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card service-card shadow-sm">
+                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                            <i class="fas fa-palette service-icon"></i>
+                            <h3 class="card-title">Maquillaje</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Aplicación profesional de cosméticos para realzar la belleza.</p>
+                            <p class="price mb-3">Precio: 50€</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Duración: 1h</small>
+                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Maquillaje profesional')">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Depilación Cejas -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card service-card shadow-sm">
+                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                            <i class="fas fa-eye service-icon"></i>
+                            <h3 class="card-title">Depilación de cejas</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Diseño y depilación profesional de cejas.</p>
+                            <p class="price mb-3">Precio: 12€</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Duración: 20 min</small>
+                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Depilación de cejas')">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Depilación Labio superior -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card service-card shadow-sm">
+                        <div class="card-header d-flex flex-column align-items-center justify-content-center py-3">
+                            <i class="fas fa-lips service-icon"></i>
+                            <h3 class="card-title">Depilación labio superior</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Depilación precisa del labio superior.</p>
+                            <p class="price mb-3">Precio: 8€</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Duración: 15 min</small>
+                                <button class="btn btn-primary btn-sm" onclick="reservarServicio('Depilación labio superior')">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Mostrar la sección de servicios correspondiente
+        function showServices(tipo) {
+            // Oculta todas las secciones primero
+            document.getElementById('pelo-services').style.display = 'none';
+            document.getElementById('facial-services').style.display = 'none';
+            
+            // Muestra la sección seleccionada
+            if (tipo === 'pelo') {
+                document.getElementById('pelo-services').style.display = 'block';
+            } else if (tipo === 'facial') {
+                document.getElementById('facial-services').style.display = 'block';
+            }
+        }
+        
+        // Mostrar subcategorías de Pelo
+        function showPeloSubCategory(subCategory) {
+            // Oculta todos los contenidos de subcategorías primero
+            const subTabContents = document.querySelectorAll('#peloSubTabContent .tab-pane');
+            subTabContents.forEach(content => {
+                content.classList.remove('show', 'active');
+            });
+            
+            // Muestra la subcategoría seleccionada
+            document.getElementById(subCategory).classList.add('show', 'active');
+            
+            // Actualiza las pestañas activas
+            const subTabs = document.querySelectorAll('#peloSubTabs .nav-link');
+            subTabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`#peloSubTabs .nav-link[onclick="showPeloSubCategory('${subCategory}')"]`).classList.add('active');
+        }
+        
+        // Función para reservar servicios (simulada)
+        function reservarServicio(servicio) {
+            alert(`Has reservado el servicio: ${servicio}`);
+            // Aquí iría la lógica real para reservar el servicio
+        }
+    </script>
 
-		
-
-
-
+<br></br><br></br>
 <footer class="ftco-footer ftco-section">
     <div class="container">
         <div class="row mb-5 justify-content-between"> <!-- Cambiado a justify-content-between -->
@@ -853,7 +714,6 @@
                             <ul class="list-unstyled">
                                 <li><a href="index.html" class="py-2 d-block">Inicio</a></li>
                                 <li><a href="services.html" class="py-2 d-block">Servicios</a></li>
-                                <li><a href="products.html" class="py-2 d-block">Productos</a></li>
                                 <li><a href="gallery.html" class="py-2 d-block">Galería</a></li>
                             </ul>
                         </div>
